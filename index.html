@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Volunteer Sign up form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+        html,
+        body {
+            min-height: 100%;
+        }
+
+        body,
+        div,
+        form,
+        input,
+        select,
+        textarea,
+        label,
+        p {
+            padding: 0;
+            margin: 0;
+            outline: none;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 14px;
+            color: #666;
+            line-height: 22px;
+        }
+
+        .testbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+            padding: 20px;
+        }
+
+        form {
+            width: 415px;
+            padding: 20px;
+            border-radius: 6px;
+            background: #fff;
+            box-shadow: 0 0 8px #669999;
+        }
+
+        input,
+        select,
+        textarea {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input {
+            /* width: calc(100% - 10px); */
+            padding: 5px;
+        }
+
+        input[type="date"] {
+            padding: 4px 5px;
+        }
+
+        textarea {
+            width: calc(100% - 12px);
+            padding: 5px;
+        }
+
+        .item {
+            position: relative;
+            margin: 10px 0;
+        }
+
+        .btn-block {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        button {
+            width: 150px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #669999;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #a3c2c2;
+        }
+
+        label[for="minutes"] {
+            margin-left: 125px;
+        }
+
+        #minutes {
+            margin-left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="testbox">
+        <form action="/">
+            <div class="item">
+                <p>Filament Çeşidi</p>
+                <select id="filament">
+                    <option value="P">PLA</option>
+                    <option value="PP">PLA Premium</option>
+                    <option value="T">TPU Flex</option>
+                </select>
+            </div>
+
+            <div class="item">
+                <label for="mass">Harcanan Filament (gram)</label> <br>
+                <input id="mass" type="number" name="mass" required />
+            </div>
+
+            <div class="item">
+                <div class="time">
+                    <label for="hours">Geçen Süre (saat)</label>
+                    <label for="minutes">Geçen Süre (dakika)</label>
+                    <br>
+                    <input id="hours" type="number" name="minutes" required />
+                    <input id="minutes" type="number" name="hours" required />
+                </div>
+            </div>
+
+            <div class="btn-block">
+                <button type="button" class="calculate">Hesapla</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
